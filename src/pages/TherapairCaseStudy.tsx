@@ -7,26 +7,29 @@ export function TherapairCaseStudy() {
   return (
     <div className="min-h-screen bg-[var(--pure-white)] pt-20">
       {/* Hero Section */}
-      <section className="py-24 px-6 md:px-12 bg-gradient-to-br from-[var(--electric-iris)] to-[var(--soft-cyan)] text-white">
-        <div className="max-w-[1200px] mx-auto">
+      <section className="py-32 md:py-40 px-6 md:px-12 bg-gradient-to-br from-[#FFE8E0] via-[#FFF5F2] to-[#F5F0FF] relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #5B4EFF 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        
+        <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link to="/work" className="inline-flex items-center gap-2 text-white text-opacity-80 hover:text-opacity-100 mb-6 transition-opacity">
+            <Link to="/work" className="inline-flex items-center gap-2 text-[var(--deep-navy)] text-opacity-60 hover:text-opacity-100 mb-8 transition-opacity font-medium">
               <span>← Back to Work</span>
             </Link>
             
-            <div className="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-[var(--electric-iris)] bg-opacity-10 text-[var(--electric-iris)] px-5 py-2 rounded-full text-sm font-semibold mb-8">
               Health Tech · AI Product Design
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 text-[var(--deep-navy)] tracking-tight">
               Therapair
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-8 opacity-90 max-w-3xl leading-relaxed">
+            <p className="text-2xl md:text-4xl mb-12 text-[var(--deep-navy)] text-opacity-70 max-w-4xl leading-relaxed font-light">
               Intelligent therapist matching for inclusive mental health
             </p>
 
@@ -34,27 +37,27 @@ export function TherapairCaseStudy() {
               href="https://therapair.com.au/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-[var(--electric-iris)] px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[var(--electric-iris)] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[var(--shadow-iris)] hover:scale-[1.02] transition-all text-lg"
             >
               <span>Visit Therapair</span>
-              <ExternalLink size={18} />
+              <ExternalLink size={20} />
             </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="px-6 md:px-12 -mt-16">
+      {/* Hero Image - Warm and Human-Centered */}
+      <section className="px-6 md:px-12 -mt-24">
         <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="aspect-[16/9] bg-white rounded-3xl overflow-hidden shadow-[var(--shadow-3)]"
+            className="aspect-[16/9] bg-white rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] ring-1 ring-black ring-opacity-5"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200"
-              alt="Therapair platform"
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=90"
+              alt="Person smiling warmly during a therapy session - representing inclusive mental healthcare"
               className="w-full h-full object-cover"
             />
           </motion.div>
