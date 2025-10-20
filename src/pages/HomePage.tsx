@@ -102,7 +102,7 @@ export function HomePage() {
       </section>
 
       {/* Value Proposition Section */}
-      <section className="py-32 md:py-40 px-6 md:px-12 bg-[var(--warm-gray-bg)]">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-[var(--warm-gray-bg)]">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -173,7 +173,7 @@ export function HomePage() {
       </section>
 
       {/* Featured Work - Therapair */}
-      <section className="py-32 md:py-40 px-6 md:px-12">
+      <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -242,7 +242,7 @@ export function HomePage() {
           </Link>
 
           {/* More Projects */}
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
+          <div className="grid md:grid-cols-2 gap-8 mt-16">
             <Link to="/work">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -312,7 +312,7 @@ export function HomePage() {
 
       {/* Philosophy Section */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-[var(--deep-navy)] text-white">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -327,7 +327,7 @@ export function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 num: "01",
@@ -400,7 +400,7 @@ export function HomePage() {
 
       {/* Final CTA */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-white">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

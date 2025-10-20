@@ -32,7 +32,7 @@ export function WorkPage() {
   return (
     <div className="min-h-screen bg-[var(--pure-white)] pt-20">
       {/* Hero Section */}
-      <section className="py-32 md:py-48 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)] relative overflow-hidden">
+      <section className="py-32 md:py-40 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)] relative overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle, #5B4EFF 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         
@@ -60,7 +60,7 @@ export function WorkPage() {
       </section>
 
       {/* Featured Project - Therapair */}
-      <section className="py-32 md:py-48 px-6 md:px-12">
+      <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -125,7 +125,7 @@ export function WorkPage() {
       </section>
 
       {/* All Projects Grid */}
-      <section className="py-32 md:py-48 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)]">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)]">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -223,7 +223,7 @@ export function WorkPage() {
 
       {/* CTA Section */}
       <section className="py-24 md:py-32 px-6 md:px-12">
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1440px] mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
