@@ -32,21 +32,27 @@ export function WorkPage() {
   return (
     <div className="min-h-screen bg-[var(--pure-white)] pt-20">
       {/* Hero Section */}
-      <section className="py-24 px-6 md:px-12 bg-[var(--warm-gray-bg)]">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="py-32 md:py-48 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)] relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle, #5B4EFF 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+        
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
           >
-            <div className="text-sm font-medium text-[var(--electric-iris)] mb-6 tracking-wide">
+            <div className="text-sm font-semibold text-[var(--electric-iris)] mb-8 tracking-wide uppercase">
               Our Work
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-[var(--deep-navy)] mb-6">
-              Ideas, concepts, and proof of concepts
+            <h1 className="text-6xl md:text-8xl font-bold text-[var(--deep-navy)] mb-8 tracking-tight leading-[1.1]">
+              Ideas, concepts, and{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--electric-iris)] to-[var(--soft-cyan)]">
+                proof of concepts
+              </span>
             </h1>
-            <p className="text-xl text-[var(--cool-gray-text)] leading-relaxed">
+            <p className="text-2xl md:text-3xl text-[var(--cool-gray-text)] leading-relaxed font-light">
               Real projects solving real problems. From health tech to education, we build intelligent systems that augment human capability.
             </p>
           </motion.div>
@@ -54,15 +60,15 @@ export function WorkPage() {
       </section>
 
       {/* Featured Project - Therapair */}
-      <section className="py-24 md:py-32 px-6 md:px-12">
+      <section className="py-32 md:py-48 px-6 md:px-12">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-8"
+            className="mb-20 text-center"
           >
-            <h2 className="text-3xl font-bold text-[var(--deep-navy)]">Featured Case Study</h2>
+            <h2 className="text-5xl md:text-7xl font-bold text-[var(--deep-navy)] tracking-tight">Featured Case Study</h2>
           </motion.div>
 
           <Link to="/work/therapair">
@@ -70,42 +76,45 @@ export function WorkPage() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-12 items-center bg-gradient-to-br from-[var(--electric-iris)] to-[var(--soft-cyan)] rounded-3xl p-8 md:p-12 text-white cursor-pointer hover:shadow-[var(--shadow-3)] transition-all"
+              className="grid md:grid-cols-2 gap-16 items-center bg-gradient-to-br from-[#FFE8E0] via-[#FFF5F2] to-[#F5F0FF] rounded-[32px] p-12 md:p-16 cursor-pointer hover:shadow-[var(--shadow-5)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group"
             >
-              <div>
-                <div className="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              {/* Subtle background pattern */}
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #5B4EFF 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+              
+              <div className="relative z-10">
+                <div className="inline-block bg-[var(--electric-iris)] bg-opacity-10 text-[var(--electric-iris)] px-5 py-2 rounded-full text-sm font-semibold mb-6">
                   Health Tech · AI Product Design
                 </div>
-                <h3 className="text-3xl md:text-4xl mb-4 font-bold">
+                <h3 className="text-4xl md:text-5xl mb-6 font-bold text-[var(--deep-navy)] tracking-tight">
                   Therapair
                 </h3>
-                <p className="text-xl mb-6 opacity-90 leading-relaxed">
+                <p className="text-2xl mb-6 text-[var(--deep-navy)] text-opacity-80 leading-relaxed font-medium">
                   Intelligent therapist matching for inclusive mental health
                 </p>
-                <p className="mb-8 opacity-80 leading-relaxed">
+                <p className="mb-10 text-[var(--deep-navy)] text-opacity-60 leading-relaxed text-lg">
                   AI-powered conversational matching that considers identity, values, and therapeutic needs—making mental healthcare accessible for LGBTQ+, neurodivergent, and culturally diverse communities.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm">
+                <div className="flex flex-wrap gap-3 mb-10">
+                  <div className="bg-white px-5 py-2 rounded-xl text-sm font-medium text-[var(--deep-navy)] shadow-sm">
                     AI Matching Algorithm
                   </div>
-                  <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm">
+                  <div className="bg-white px-5 py-2 rounded-xl text-sm font-medium text-[var(--deep-navy)] shadow-sm">
                     Inclusive Design
                   </div>
-                  <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm">
+                  <div className="bg-white px-5 py-2 rounded-xl text-sm font-medium text-[var(--deep-navy)] shadow-sm">
                     Partnership with Unison Health
                   </div>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-white text-[var(--electric-iris)] px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+                <div className="inline-flex items-center gap-3 bg-[var(--electric-iris)] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[var(--shadow-iris)] group-hover:scale-[1.02] transition-all">
                   <span>View Full Case Study</span>
-                  <ArrowUpRight size={18} />
+                  <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
               </div>
-              <div className="relative">
-                <div className="aspect-[4/3] bg-white bg-opacity-10 rounded-2xl overflow-hidden">
+              <div className="relative z-10">
+                <div className="aspect-[4/3] bg-white rounded-3xl overflow-hidden shadow-[var(--shadow-4)] ring-1 ring-black ring-opacity-5">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800"
-                    alt="Therapair mental health matching platform"
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=90"
+                    alt="Person smiling warmly - representing inclusive mental healthcare"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -116,16 +125,16 @@ export function WorkPage() {
       </section>
 
       {/* All Projects Grid */}
-      <section className="py-24 px-6 md:px-12 bg-[var(--warm-gray-bg)]">
+      <section className="py-32 md:py-48 px-6 md:px-12 bg-gradient-to-br from-[var(--warm-gray-bg)] via-white to-[var(--warm-gray-bg)]">
         <div className="max-w-[1440px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-20 text-center"
           >
-            <h2 className="text-3xl font-bold text-[var(--deep-navy)] mb-4">All Projects</h2>
-            <p className="text-[var(--cool-gray-text)]">Exploring the intersection of design and intelligent systems</p>
+            <h2 className="text-5xl md:text-7xl font-bold text-[var(--deep-navy)] mb-6 tracking-tight">All Projects</h2>
+            <p className="text-2xl text-[var(--cool-gray-text)] font-light">Exploring the intersection of design and intelligent systems</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -136,7 +145,7 @@ export function WorkPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-[var(--shadow-1)] hover:shadow-[var(--shadow-2)] hover:-translate-y-1 transition-all group cursor-pointer"
+                  className="bg-white rounded-3xl overflow-hidden shadow-[var(--shadow-2)] hover:shadow-[var(--shadow-4)] hover:-translate-y-2 transition-all duration-500 group cursor-pointer"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
                     <ImageWithFallback
